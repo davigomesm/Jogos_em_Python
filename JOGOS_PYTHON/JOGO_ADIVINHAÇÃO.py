@@ -1,14 +1,15 @@
 from random import randint
-from time import sleep
-computador = randint(0, 5)
-print("COMPUTADOR: -VOU SORTEAR UM NUMERO DE 0 A 5, TENTE ACERTAR.")
-print("=-"*40)
-jogador = int(input("Digite um número de 0 a 5: "))
-print("=-"*40)
-print("\033[34mCALCULANDO...\033[m")
-sleep(2)
-print("O NUMÉRO SORTEADO FOI O {}".format(computador))
-if jogador == computador:
-    print("\033[32mPARABENS VOCE ACERTOU O NÚMERO\033[m")
-else:
-    print("\033[31mQUE PENA, VOCE ERROU O NÚMERO\033[m")
+print("=-"*25)
+print("-COMPUTADOR-: Vou pensar em um número!")
+print("=-"*25)
+computador = randint(0, 10)
+jogador = int(input("Digite um numero de 0 a 10 e tente adivinhar qual é: "))
+c = 1
+while jogador != computador:
+    if computador > jogador:
+        jogador = int(input("É mais... Digite outro número: "))
+        c = c + 1
+    if computador < jogador:
+        jogador = int(input("É menos... Digite outro número: "))
+        c = c + 1
+print("Você acertou em {} tentativas! parabéns <3".format(c))
