@@ -1,2 +1,2 @@
 # Jogos_em_Python
- Joguinos criados com python
+ Joguinhos criados com python
